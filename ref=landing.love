@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- 基本設定 -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Astro v5.13.3">
+        <!-- Title -->
+        <title>PromptWars × TechVerse</title>
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R00M7W3JTS"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-R00M7W3JTS');
+        </script>
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="PromptWars × TechVerse is the ultimate AI prompt engineering competition where innovation meets intelligence. Join the challenge on September 3, 2026!">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://instagram.com/promptwars">
+        <meta property="og:title" content="PromptWars × TechVerse">
+        <meta property="og:description" content="PromptWars × TechVerse is the ultimate AI prompt engineering competition where innovation meets intelligence. Join the challenge on September 3, 2026!">
+        <meta property="og:image" content="https://alche.studio/ogp.jpg">
+        <meta property="og:site_name" content="PromptWars × TechVerse">
+        <meta property="og:locale" content="en_US">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="PromptWars × TechVerse">
+        <meta name="twitter:description" content="PromptWars × TechVerse is the ultimate AI prompt engineering competition where innovation meets intelligence. Join the challenge on September 3, 2026!">
+        <meta name="twitter:image" content="https://alche.studio/ogp.jpg">
+        <meta name="twitter:site" content="@promptwars">
+        <!-- Favicon -->
+        <link rel="icon" href="https://alche.studio/favicon.png">
+        <link rel="apple-touch-icon" href="https://alche.studio/favicon/000.png">
+        <!-- その他 -->
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <link rel="stylesheet" href="https://alche.studio/_astro/index.DnJ5xLaK.css">
+        <style>
+            @charset "UTF-8";* {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0
+            }
+
+            html,body {
+                font-family: Hiragino Kaku Gothic ProN,メイリオ,sans-serif;
+                text-size-adjust: 100%;
+                -webkit-font-smoothing: antialiased;
+                -webkit-tap-highlight-color: transparent;
+                color: #fff;
+                background-color: #000
+            }
+
+    
+        /* Hide UnicornStudio branding watermark/badges */
+        a[href*="unicorn.studio"],
+        div[class*="unicornstudio"],
+        [id*="unicornstudio"],
+        div[class*="us-watermark"],
+        div[class*="us-badge"],
+        div:has(> a[href*="unicorn.studio"]) {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        /* Force UnicornStudio container and canvas to cover the full viewport tab */
+        div[data-us-project] {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: -2 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+        div[data-us-project] canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            object-fit: cover !important;
+        }
+
+
+        /* Hide original WebGL canvases and overlays */
+        #gl-canvas, 
+        .Layout__gl, 
+        .GLCanvas__container {
+            display: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        /* Hide UnicornStudio branding watermark/badges */
+        a[href*="unicorn.studio"],
+        div[class*="unicornstudio"],
+        [id*="unicornstudio"],
+        div[class*="us-watermark"],
+        div[class*="us-badge"],
+        div:has(> a[href*="unicorn.studio"]) {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        /* Force UnicornStudio container and canvas to cover the full viewport tab */
+        div[data-us-project] {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: -2 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+        div[data-us-project] canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            object-fit: cover !important;
+            filter: brightness(1.25) contrast(1.05) !important; /* Brighter overlay */
+        }
+
+        body {
+                position: relative
+            }
+
+            body[data-modal=true] {
+                overflow-y: hidden
+            }
+
+            img {
+                max-width: 100%;
+                vertical-align: top
+            }
+
+            li {
+                list-style: none
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff
+            }
+
+            button {
+                appearance: none;
+                cursor: pointer;
+                user-select: none;
+                outline: none;
+                background: none;
+                border: none;
+                color: #363b46
+            }
+
+            input,textarea {
+                appearance: none;
+                user-select: all;
+                outline: none;
+                border: none
+            }
+
+            svg {
+                display: block
+            }
+
+            [data-media=max-xl] {
+                display: none
+            }
+
+            @media only screen and (min-width: 950px) {
+                [data-media=max-xl] {
+                    display:block
+                }
+            }
+
+            [data-media=max-md] {
+                display: none
+            }
+
+            @media only screen and (min-width: 769px) {
+                [data-media=max-md] {
+                    display:block
+                }
+            }
+
+            @media only screen and (min-width: 950px) {
+                [data-media=min-xl] {
+                    display:none
+                }
+            }
+
+            @media not screen and (min-width: 950px) {
+                [data-media=min-xl] {
+                    display:block
+                }
+            }
+
+            [data-media=min-md] {
+                display: none
+            }
+
+            @media not screen and (min-width: 769px) {
+                [data-media=min-md] {
+                    display:block
+                }
+            }
+
+            [data-media=max-xl-inline] {
+                display: none
+            }
+
+            @media only screen and (min-width: 950px) {
+                [data-media=max-xl-inline] {
+                    display:inline
+                }
+            }
+
+            @media only screen and (min-width: 950px) {
+                [data-media=min-xl-inline] {
+                    display:none
+                }
+            }
+
+            @media not screen and (min-width: 950px) {
+                [data-media=min-xl-inline] {
+                    display:inline
+                }
+            }
+
+            .lenis.lenis-smooth {
+                scroll-behavior: auto!important
+            }
+
+            .lenis.lenis-smooth [data-lenis-prevent] {
+                overscroll-behavior: contain
+            }
+
+            .lenis.lenis-stopped {
+                overflow: hidden
+            }
+
+            .lenis.lenis-smooth iframe {
+                pointer-events: none
+            }
+        </style>
+        <link rel="stylesheet" href="https://alche.studio/_astro/about.4GkHLOo2.css">
+        <link rel="stylesheet" href="https://alche.studio/_astro/index.DCV4tj_L.css">
+        <style>
+            @charset "UTF-8";.SlotButton__button {
+                position: relative;
+                display: inline-block;
+                color: inherit;
+                text-decoration: none;
+                overflow: hidden;
+                transition: background-color .3s cubic-bezier(.25,.46,.45,.94),border-color .3s cubic-bezier(.25,.46,.45,.94)
+            }
+
+            .SlotButton__button:hover .SlotButton__text_wrapper {
+                transform: translateY(-100%)
+            }
+
+            .SlotButton__button:hover .SlotButton__text_hover {
+                opacity: 1
+            }
+
+            .SlotButton__button:hover .SlotButton__text {
+                opacity: 0
+            }
+
+            .SlotButton__text_wrapper {
+                position: relative;
+                display: block;
+                transition: transform .3s cubic-bezier(.25,.46,.45,.94)
+            }
+
+            .SlotButton__text {
+                display: block;
+                color: inherit;
+                transition: color .3s cubic-bezier(.25,.46,.45,.94),opacity .3s cubic-bezier(.25,.46,.45,.94)
+            }
+
+            .SlotButton__text_hover {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: block;
+                color: #000;
+                opacity: 0;
+                transition: opacity .3s cubic-bezier(.25,.46,.45,.94)
+            }
+        </style>
+        <link rel="stylesheet" href="https://alche.studio/_astro/about.ei7DbTo6.css">
+        <script type="module" src="https://alche.studio/_astro/page.SNkKDTDH.js"></script>
+    
+    <!-- Custom Background, Loading & Watermark Hiding Styles -->
+    <style>
+
+        /* Hide UnicornStudio branding watermark/badges */
+        a[href*="unicorn.studio"],
+        div[class*="unicornstudio"],
+        [id*="unicornstudio"],
+        div[class*="us-watermark"],
+        div[class*="us-badge"],
+        div:has(> a[href*="unicorn.studio"]) {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        /* Force UnicornStudio container and canvas to cover the full viewport tab */
+        div[data-us-project] {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: -2 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+        div[data-us-project] canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            object-fit: cover !important;
+        }
+
+
+        /* Hide original WebGL canvases and overlays */
+        #gl-canvas, 
+        .Layout__gl, 
+        .GLCanvas__container {
+            display: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        /* Hide UnicornStudio branding watermark/badges */
+        a[href*="unicorn.studio"],
+        div[class*="unicornstudio"],
+        [id*="unicornstudio"],
+        div[class*="us-watermark"],
+        div[class*="us-badge"],
+        div:has(> a[href*="unicorn.studio"]) {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        /* Force UnicornStudio container and canvas to cover the full viewport tab */
+        div[data-us-project] {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: -2 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+        div[data-us-project] canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            object-fit: cover !important;
+            filter: brightness(1.25) contrast(1.05) !important; /* Brighter overlay */
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.15) !important; /* Light overlay to keep the WebGL canvas bright and vivid */
+            min-height: 100vh;
+        }
+
+        
+        /* Force layout and content visibility since the original Three.js WebGL loaders are disabled */
+        [data-page=top][data-gl_loading_end=false] .Layout__inner,
+        [data-page=top][data-gl_loading_end=false] .Header__container,
+        .Layout__inner,
+        .Header__container,
+        .Footer__footer,
+        .Works__container,
+        .Service__container,
+        .News__newsArea,
+        .TopScrollIndicator__top_scroll_indicator,
+        .MissionVision__ttl,
+        .MissionVision__text,
+        .MissionVision__text_en,
+        .Stellla__container,
+        .HamburgerIcon__hamburger {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+        
+        /* Force UnicornStudio container and canvas to cover the full viewport tab, hidden initially to prevent lag */
+        div[data-us-project] {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: -2 !important;
+            pointer-events: none !important;
+            overflow: hidden !important;
+        }
+        div[data-us-project] canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            object-fit: cover !important;
+            filter: brightness(1.25) contrast(1.05) !important; /* Brighter and punchier colors */
+        }
+        
+        /* Hide UnicornStudio Watermark / Branding Completely */
+        a[href*="unicorn.studio"], 
+        div[class*="unicornstudio"],
+        div[class*="unicorn-branding"],
+        iframe[src*="unicorn.studio"],
+        [class*="branding"],
+        [class*="watermark"] {
+            display: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            width: 0 !important;
+        }
+        
+        /* Premium Loading Screen Overlay Style - Covers Full Window Tab */
+        #loading-overlay {
+            display: flex !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 99999 !important;
+            background-color: #000000 !important;
+            transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        }
+        #loading-overlay .Loading__lottieContainer {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: 100% !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: none !important;
+            mask: none !important;
+            -webkit-mask: none !important;
+        }
+        #loading-lottie {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        #loading-overlay .Loading__lottie,
+        #loading-overlay .Loading__logo {
+            opacity: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        #loading-overlay .Loading__text {
+            opacity: 1 !important;
+            transition: opacity 0.8s ease !important;
+        }
+
+        /* Set containers to transparent so we see the UnicornStudio background */
+        .Layout__wrapper, 
+        .Layout__inner, 
+        .Layout__main,
+        .SectionContainer__container {
+            background: transparent !important;
+            background-color: transparent !important;
+        }
+    </style>
+
+</head>
+    <body data-page="top">
+    <!-- UnicornStudio Fullscreen WebGL Background -->
+    <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; pointer-events: none;" 
+         data-us-project="Yv3Lpq3iPSFaN1F8JVhz"
+         data-us-scale="0.75"
+         data-us-dpi="1.0"
+         data-us-lazyload="false"
+         data-us-fixed="true"
+         data-us-production="true">
+    </div>
+
+    <!-- Premium Loading Screen Overlay - Covers Full Window Tab -->
+    <div id="loading-overlay" class="Loading__container">
+        <div class="Loading__lottieContainer">
+            <div id="loading-lottie" class="Loading__lottie undefined"></div>
+            <div id="loading-logo" class="Loading__logo undefined"></div>
+        </div>
+    </div>
+
+    <!-- Header Navigation (Alche Studio Style) -->
+    <header class="Header__container">
+        <div class="Header__logo">
+            <a href="/">
+                <svg width="120" height="auto" viewBox="0 0 1000 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="500" y="165" font-family="'Syne', 'Space Grotesk', sans-serif" font-weight="800" font-size="200" fill="white" text-anchor="middle" letter-spacing="0.05em">ALPHA</text>
+                </svg>
+            </a>
+        </div>
+        <nav class="Header__nav">
+            <div class="Header__nav_item" data-page="news">
+                <a href="#news-area" style="pointer-events: none; opacity: 0.5;">
+                    <span>News</span>
+                </a>
+            </div>
+            <div class="Header__nav_item" data-page="works">
+                <a href="#tracks-section" style="pointer-events: none; opacity: 0.5;">
+                    <span>Works</span>
+                </a>
+            </div>
+            <div class="Header__nav_item" data-page="about">
+                <a href="#about-section" style="pointer-events: none; opacity: 0.5;">
+                    <span>About</span>
+                </a>
+            </div>
+            <div class="Header__nav_item" data-page="stellla">
+                <a href="#event-info-section" style="pointer-events: none; opacity: 0.5;">
+                    <span>stellla</span>
+                </a>
+            </div>
+        </nav>
+        <div class="Header__right_controls">
+            <a href="https://instagram.com/promptwars" target="_blank" class="SlotButton__button Header__contact">
+                <span class="SlotButton__text_wrapper">
+                    <span class="SlotButton__text">Contact / Recruit</span>
+                    <span class="SlotButton__text_hover">Contact / Recruit</span>
+                </span>
+            </a>
+            <button class="SoundToggle__button " data-sound-toggle data-muted="true" aria-label="サウンドのON/OFF切り替え" type="button">
+                <div class="SoundToggle__sound_bars">
+                    <div class="SoundToggle__bar undefined bar"></div>
+                    <div class="SoundToggle__bar undefined bar"></div>
+                    <div class="SoundToggle__bar undefined bar"></div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side Menu Hamburger Overlays (Alche Studio Style) -->
+    <div class="SideMenu__overlay Header__side_menu" data-side-menu>
+        <div class="SideMenu__backdrop" data-backdrop></div>
+        <nav class="SideMenu__menu" data-menu>
+            <div class="SideMenu__menu_inner">
+                <div class="SideMenu__menu_item">
+                    <a href="/">
+                        <span>Top</span>
+                    </a>
+                </div>
+                <div class="SideMenu__menu_item">
+                    <a href="#news-area" style="pointer-events: none; opacity: 0.5;">
+                        <span>News</span>
+                    </a>
+                </div>
+                <div class="SideMenu__menu_item">
+                    <a href="#tracks-section" style="pointer-events: none; opacity: 0.5;">
+                        <span>Works</span>
+                    </a>
+                </div>
+                <div class="SideMenu__menu_item">
+                    <a href="#about-section" style="pointer-events: none; opacity: 0.5;">
+                        <span>About</span>
+                    </a>
+                </div>
+                <div class="SideMenu__menu_item">
+                    <a href="#event-info-section" style="pointer-events: none; opacity: 0.5;">
+                        <span>stellla</span>
+                    </a>
+                </div>
+                <div class="SideMenu__menu_item">
+                    <a href="https://instagram.com/promptwars" target="_blank">
+                        <span>Contact / Recruit</span>
+                    </a>
+                </div>
+            </div>
+            <!-- ソーシャルリンク -->
+            <div class="SideMenu__social_links">
+                <a href="https://instagram.com/promptwars" target="_blank" rel="noopener noreferrer" class="SideMenu__social_link">
+                    <span>INSTAGRAM</span>
+                </a>
+            </div>
+        </nav>
+        <button class="HamburgerIcon__hamburger SideMenu__hamburger" type="button" aria-label="メニューを開く" data-hamburger>
+            <span class="HamburgerIcon__line"></span>
+            <span class="HamburgerIcon__line"></span>
+            <span class="HamburgerIcon__line"></span>
+        </button>
+    </div>
+
+    <!-- Layout Wrapper & KV Section -->
+    <div class="Layout__wrapper">
+        <div class="Layout__gl">
+            <div class="Layout__gl_inner">
+                <div id="gl-canvas" class="GLCanvas__container"></div>
+            </div>
+        </div>
+        <div class="Layout__inner">
+            <main id="swup" class="Layout__main">
+                <div>
+                    <!-- Key Visual container (Clean above-the-fold canvas layout) -->
+                    <div class="SectionContainer__container" data-top_section="kv" data-snap-ratio="1">
+                        <div class="SectionContainer__label">kv</div>
+                        <div class="KV__container" data-kv-container>
+                            <div class="KV__inner" style="position: relative; width: 100%; height: 100%;">
+                                <!-- scroll to explore 縦書きテキスト -->
+                                <div class="KV__scrollText">
+                                    <span>scroll to explore →</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Lottie Web Player -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load background animation (using hardware-accelerated canvas renderer to eliminate SVG lag)
+            var bgAnim = lottie.loadAnimation({
+                container: document.getElementById('loading-lottie'),
+                renderer: 'canvas',
+                loop: true,
+                autoplay: true,
+                path: '/common/loading/bg/data.json',
+                rendererSettings: {
+                    preserveAspectRatio: 'xMidYMid slice' // Scale to cover screen
+                }
+            });
+
+            // Load logo drawing animation
+            var logoAnim = lottie.loadAnimation({
+                container: document.getElementById('loading-logo'),
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: '/common/loading/logo/data.json'
+            });
+
+            // Transition the loading overlay out, then fire up UnicornStudio WebGL
+            setTimeout(function() {
+                var overlay = document.getElementById('loading-overlay');
+                if (overlay) {
+                    overlay.style.setProperty('opacity', '0', 'important');
+                    overlay.style.setProperty('pointer-events', 'none', 'important');
+                    
+                    // Reveal UnicornStudio div container
+                    var usDiv = document.querySelector('div[data-us-project]');
+                    if (usDiv) {
+                        usDiv.style.setProperty('display', 'block', 'important');
+                    }
+
+                    // Dynamically script-inject UnicornStudio now to avoid CPU/GPU competition during intro animation
+                    var script = document.createElement("script");
+                    script.type = "text/javascript";
+                    script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.2.6/dist/unicornStudio.umd.js";
+                    script.onload = function() {
+                        if (window.UnicornStudio && window.UnicornStudio.init) {
+                            window.UnicornStudio.init();
+                        }
+                    };
+                    document.body.appendChild(script);
+
+                    // Clean up Lottie resources to free memory completely
+                    setTimeout(function() {
+                        overlay.style.setProperty('display', 'none', 'important');
+                        lottie.destroy();
+                    }, 1200);
+                }
+            }, 3200);
+        });
+    </script>
+</body>
+</html>
