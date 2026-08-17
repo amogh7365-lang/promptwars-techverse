@@ -1,0 +1,11 @@
+# OS files
+.DS_Store
+._*
+
+# Python scripts and cache
+*.py
+*.pyc
+__pycache__/
+
+# Log files
+*.log
